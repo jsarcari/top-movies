@@ -4,6 +4,13 @@ import axios from "axios";
 
 const baseURL = "https://api.themoviedb.org/3/movie/popular?api_key=506fadb0256c13349acc05dabebf9604&language=en-US";
 
+function showMovies(movies) {
+  for (var item in movies.results) {
+    <p>{movies.results[item].title}</p>
+    //includeContainer(json.results[item].title, json.results[item].overview);
+  }
+}
+
 export default function App() {
   const [movie, setMovie] = useState(null);
   const [error, setError] = useState(null);
@@ -19,14 +26,14 @@ export default function App() {
   if (error) return `Error: ${error.message}`;
   if (!movie) return "No movies!";
 
-  console.log(movie);
+  var movies = movie;
 
   return (
     <div className="App">
       <header className="App-header">
         <h1>The most watched movies now</h1>
+        {showMovies(movies)}
       </header>
-      <p>{movie.title}</p>
     </div>
   );
 }
