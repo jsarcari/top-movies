@@ -7,6 +7,10 @@
   text-align: center;
 }
 
+th, td {
+  vertical-align: bottom;
+}
+
 .titleMovie {
   width: 20%;
   text-align: center;
@@ -34,6 +38,7 @@
 
 .five-stars {
   display: flex;
+  height: 55px;
 }
 
 .stars {
