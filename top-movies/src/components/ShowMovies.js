@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useEffect, useState } from "react";
+import ShowAverage from './ShowAverage';
 import axios from "axios";
 
 export default function ShowMovies(props) {
@@ -21,6 +22,10 @@ export default function ShowMovies(props) {
 
     var genresList = genre;
 
+    function printVote(vote_average) {
+        return vote_average.toFixed(1);
+    }
+
     function printMovie(movie) {
         return (
         <tr key={movie.title}>
@@ -28,7 +33,13 @@ export default function ShowMovies(props) {
             <td>
                 <div>{`${movie.overview}`}</div>
                 <br />
-                <div><strong>Genres:</strong> {movie.genre_ids.map(genre => printGenre(genre, movie))}</div>
+                <div class="genre"><strong>Genres:</strong> {movie.genre_ids.map(genre => printGenre(genre, movie))}</div>
+                <div className="five-stars">
+                    <div class="stars">
+                        <ShowAverage average={movie.vote_average.toFixed(1)/2}/>
+                    </div>
+                    <div class="vote-average">{printVote(movie.vote_average.toFixed(1)/2)}/5.0</div>
+                </div>
             </td>
         </tr>
         );

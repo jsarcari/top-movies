@@ -27,3 +27,31 @@
   max-width: 200px;
   max-height: 150px;
 }
+
+.genre {
+  padding-bottom: 10px;
+}
+
+.five-stars {
+  display: flex;
+}
+
+.stars {
+  width: 120px;
+}
+
+.vote-average {
+  color: #ffca00;
+  opacity: 0.9;
+  padding-top: 7px;
+}
+
+.average-rating {
+  position: relative;
+  appearance: none;
+  color: transparent;
+  width: auto;
+  display: inline-block;
+  vertical-align: baseline;
+  font-size: 25px;
+}
