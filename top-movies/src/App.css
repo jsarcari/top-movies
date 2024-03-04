@@ -73,6 +73,13 @@ th, td {
             -webkit-text-fill-color: transparent;
 }
 
+#selects {
+  display: flex;
+  column-gap: 10px;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
 .select {
   width: 400px !important;
 }
