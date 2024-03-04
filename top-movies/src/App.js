@@ -27,7 +27,7 @@ export default function App() {
     <div className="App">
       <header className="App-header">
         <h1 className="title">Top movies today</h1>
-        <div><ShowMovies array={movies.results} /></div>
+        <div><ShowMovies array={movies.results} value={0} /></div>
       </header>
     </div>
   );

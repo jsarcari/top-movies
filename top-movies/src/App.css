@@ -3,7 +3,7 @@
   font-size: 48px;
 }
 
-.title, .headerTable {
+.title {
   text-align: center;
 }
 
@@ -33,7 +33,7 @@ th, td {
 }
 
 .genre {
-  padding-bottom: 10px;
+  padding: 10px 0;
 }
 
 .five-stars {
@@ -59,4 +59,20 @@ th, td {
   display: inline-block;
   vertical-align: baseline;
   font-size: 25px;
+}
+
+.average-rating::before {
+  content: '★★★★★';
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgba(0,0,0,0.2);
+  background:
+              linear-gradient(90deg, gold var(--percent), rgba(0,0,0,0.2) var(--percent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+}
+
+.select {
+  width: 400px !important;
 }
